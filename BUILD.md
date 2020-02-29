@@ -554,13 +554,13 @@ git clone --recursive https://github.com/Microsoft/onnxruntime
 
 # Start the basic build
 cd /code/onnxruntime
-./build.sh --config MinSizeRel --update --build
+./build.sh --config MinSizeRel --arm --update --build
 
 # Build Shared Library
-./build.sh --config MinSizeRel --build_shared_lib
+./build.sh --config MinSizeRel --arm --build_shared_lib
 
 # Build Python Bindings and Wheel
-./build.sh --config MinSizeRel --enable_pybind --build_wheel
+./build.sh --config MinSizeRel --arm --enable_pybind --build_wheel
 
 # Build Output
 ls -l /code/onnxruntime/build/Linux/MinSizeRel/*.so
